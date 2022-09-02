@@ -27,16 +27,20 @@ body {
 }
 
 .container_botoes {
+    max-height: 30%;
+    max-width: 80%;
     width: 320px;
     display: flex;
     margin: 0;
-    padding-right: 35px;
+    padding-right: 30px;
     align-items: center;
     justify-content: space-between;
 
 }
 
 .botao_menu {
+    max-height: 50%;
+    margin: 0;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -47,6 +51,7 @@ body {
     width: 150px;
     background-color: rgb(10, 153, 254, 0.1);
     font-size: 20px;
+    font-size-adjust: inherit;
     color: rgb(10, 153, 254);
 
 }
@@ -73,7 +78,7 @@ body {
     padding: 70px 30px;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .container_secao {
@@ -88,7 +93,7 @@ body {
 }
 
 .titulo_secao {
-    
+
     margin: 0;
     padding: 50px 0 33px 0;
     color: #1B1B1B;
