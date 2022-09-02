@@ -39,6 +39,7 @@ body {
 }
 
 .botao_menu {
+    border: 0;
     max-height: 50%;
     margin: 0;
     font-weight: 500;
