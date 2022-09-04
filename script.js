@@ -1,72 +1,82 @@
 let listaProdutos = [{
-    img: './assets/img/actions/animewoman.jpg',
-    nome: 'Menina Anime',
-    preco: 170,
-    type: 'personagem',
-}, {
-    img: './assets/img/painting/clock.jpg',
-    nome: 'Smart Watch',
-    preco: 510.37,
+    img: './assets/img/moveis/aparador c 3.jpg',
+    nome: 'Aparador 3 andares',
+    dimensoes: '50 cm x 30 cm x 60 cm',
+    preco: 167,
+    id: 01,
+    codProduto: "Código do produto: 01",
     type: 'tecnologia',
-}, {
-    img: './assets/img/painting/gamepad.jpg',
-    nome: 'Controle Ps4',
-    preco: 99.70,
+},{
+    img: './assets/img/moveis/Armario 3 partes, 2 araras.jpg',
+    nome: 'Armario Maior 3 seções',
+    dimensoes: '140 cm x 31.5 cm x 170 cm',
+    preco: 300,
+    id: 02,
+    codProduto: "Código do produto: 02",
     type: 'tecnologia',
-}, {
-    img: './assets/img/actions/dragonballpersonagem.jpg',
-    nome: 'GOKU SS',
-    preco: 130,
-    type: 'personagem',
-}, {
-    img: './assets/img/painting/personagem.jpg',
-    nome: 'Homem de Lata',
+},{
+    img: './assets/img/moveis/Cabideiro menor 4 prateleiras.jpg',
+    nome: 'Cabideiro e 4 Prateleiras',
+    dimensoes: '170 cm x 82 cm x 32cm',
     preco: 230,
-    type: 'personagem',
-}, {
-    img: './assets/img/actions/starwarspersonagem.jpg',
-    nome: 'Yoda',
-    preco: 77,
-    type: 'personagem',
-}, {
-    img: './assets/img/painting/cameraSegurança.jpg',
-    nome: 'Camera Wifi',
+    id: 03,
+    codProduto: "Código do produto: 03",
+    type: 'tecnologia',
+},{
+    img: './assets/img/moveis/Estante Flutuante.jpg',
+    nome: 'Estante Flutuante',
+    dimensoes: '28 cm x 50 cm x 132 cm',
+    preco: 179,
+    id: 04,
+    codProduto: "Código do produto: 04",
+    type: 'tecnologia',
+},{
+    img: './assets/img/moveis/Floreira.jpg',
+    nome: 'Floreira',
+    dimensoes: '70 cm x 55cm x 16cm',
+    preco: 185,
+    id: 05,
+    codProduto: "Código do produto: 05",
+    type: 'tecnologia',
+},{
+    img: './assets/img/moveis/Prateleira c 6 - 03.jpg',
+    nome: 'Prateleira 6 andares',
+    dimensoes: '90.2 cm x 33.5 cm x 170 cm',
     preco: 250,
+    id: 06,
+    codProduto: "Código do produto: 06",
     type: 'tecnologia',
-}, {
-    img: './assets/img/painting/celular.webp',
-    nome: 'Celular',
-    preco: 930,
+},{
+    img: './assets/img/moveis/Prateleira c 6 menor 02.jpg',
+    nome: 'Prateleira 6 andares menor',
+    dimensoes: '50 cm x 30 cm x 140 cm',
+    preco: 190,
+    id: 07,
+    codProduto: "Código do produto: 07",
     type: 'tecnologia',
-}, {
-    img: './assets/img/painting/headsetsimples.webp',
-    nome: 'Headset',
-    preco: 270,
+},{
+    img: './assets/img/moveis/Prateleira C ferro.jpg',
+    nome: 'Prateleira Estrutura de Ferro',
+    dimensoes: '60cm x 44cm x 12cm',
+    preco: 280,
+    id: 08,
+    codProduto: "Código do produto: 08",
     type: 'tecnologia',
-}, {
-    img: './assets/img/painting/micMesa.webp',
-    nome: 'Microfone de Mesa',
-    preco: 330,
+},{
+    img: './assets/img/moveis/Prateleira c Tabua preta.jpg',
+    nome: 'Prateleira Tabua Preta',
+    dimensoes: 'Suportes 61x19cm & Tabua 60x15cm',
+    preco: 250,
+    id: 09,
+    codProduto: "Código do produto: 09",
     type: 'tecnologia',
-}, {
-    img: './assets/img/painting/notebook.jpg',
-    nome: 'Notebook',
-    preco: 2300,
-    type: 'tecnologia',
-}, {
-    img: './assets/img/painting/tablet.webp',
-    nome: 'Tablet',
-    preco: 780,
-    type: 'tecnologia',
-}, {
-    img: './assets/img/painting/tecladomouseSemfio.jpg',
-    nome: 'Kit sem Fio',
-    preco: 130,
-    type: 'tecnologia',
-}, {
-    img: './assets/img/painting/tecladoRGB.webp',
-    nome: 'Teclado Mecanico',
-    preco: 390,
+},{
+    img: './assets/img/moveis/sapateira.jpg',
+    nome: 'Banco e Sapateira',
+    dimensoes: '30 cm x 40 cm x 70 cm',
+    preco: 177,
+    id: 10,
+    codProduto: "Código do produto: 10",
     type: 'tecnologia',
 }]
 
@@ -74,11 +84,13 @@ let titulo = ""
 let listaPersonagens = document.getElementById('lista_personagens')
 let listaTecnologia = document.getElementById('lista_tecnologia')
 let product = {}
-
 let nomeProduto = ''
 let imgProduto = ''
 let precoProduto = ''
 let tipoProduto = ''
+let dimensoesProduto = ''
+let codigoProduto = ''
+
 
 function criarLista() {
     for (let i = 0; i < listaProdutos.length; i++) {
@@ -88,7 +100,7 @@ function criarLista() {
             titulo.innerText = "Lista de Personagens"
         } else if (tipoProduto == "tecnologia") {
             titulo = document.getElementById('titulo_tecnologia')
-            titulo.innerText = "Lista de Tecnologia"
+            titulo.innerText = "Moveis de Madeira Reflorestada"
         }
     }
 }
@@ -120,18 +132,19 @@ function adicionaPersonagem(i) {
     let nome = document.createElement("h3")
     nome.innerText = nomeProduto
     let preco = document.createElement("p")
-    preco.innerText = `Valor: R$ ${precoProduto.toFixed(2)}`
+    preco.innerText = `R$ ${precoProduto.toFixed(2)}`
 
     product.appendChild(div)
     div.appendChild(img)
     product.appendChild(nome)
     product.appendChild(preco)
 }
-
 function adicionaTecnologia(i) {
     nomeProduto = listaProdutos[i].nome
     imgProduto = listaProdutos[i].img
     precoProduto = listaProdutos[i].preco
+    dimensoesProduto = listaProdutos[i].dimensoes
+    codigoProduto = listaProdutos[i].codProduto
 
     product = document.createElement('li')
     listaTecnologia.appendChild(product)
@@ -143,13 +156,19 @@ function adicionaTecnologia(i) {
     img.alt = `foto do item: "${nomeProduto}"`
     let nome = document.createElement("h3")
     nome.innerText = nomeProduto
+    let dimensoes = document.createElement("h4")
+    dimensoes.innerText = dimensoesProduto
     let preco = document.createElement("p")
-    preco.innerText = `Valor: R$ ${precoProduto.toFixed(2)}`
+    preco.innerText = `R$ ${precoProduto.toFixed(2)}`
+    let codigo = document.createElement("h6")
+    codigo.innerText = codigoProduto
 
     product.appendChild(div)
     div.appendChild(img)
     product.appendChild(nome)
+    product.appendChild(dimensoes)
     product.appendChild(preco)
+    product.appendChild(codigo)
 }
 
 classificarItens()
