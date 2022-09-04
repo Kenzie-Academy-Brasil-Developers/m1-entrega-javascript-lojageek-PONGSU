@@ -78,6 +78,13 @@ let listaProdutos = [{
     id: 10,
     codProduto: "Código do produto: 10",
     type: 'tecnologia',
+},{
+    img: './assets/img/promoção.jpg',
+    nome: 'Entrego grátis em Lumiar (raio de 2km do centro) Outros lugares a combinar',         
+    dimensoes: 'Montagem é simples mas caso solicite é cobrado 25 reais para uma unidade, 40 para duas e a partir de 3 unidades: Montagem grátis!',
+    preco: 'Promoção levando 2 vc ganha 15 reais de desconto e mais 10 reais de desconto a cada produto depois do segundo',
+    codProduto: "",
+    type: 'personagem',
 }]
 
 let titulo = ""
@@ -97,7 +104,7 @@ function criarLista() {
         tipoProduto = listaProdutos[i].type
         if (tipoProduto == "personagem") {
             titulo = document.getElementById('titulo_personagens')
-            titulo.innerText = "Lista de Personagens"
+            titulo.innerText = "PROMOÇÂO !"
         } else if (tipoProduto == "tecnologia") {
             titulo = document.getElementById('titulo_tecnologia')
             titulo.innerText = "Moveis de Madeira Reflorestada"
@@ -121,6 +128,7 @@ function adicionaPersonagem(i) {
     nomeProduto = listaProdutos[i].nome
     imgProduto = listaProdutos[i].img
     precoProduto = listaProdutos[i].preco
+    dimensoesProduto = listaProdutos[i].dimensoes
 
     product = document.createElement('li')
     listaPersonagens.appendChild(product)
@@ -129,14 +137,17 @@ function adicionaPersonagem(i) {
     let img = document.createElement('img')
     img.src = imgProduto
     img.alt = `foto do item: "${nomeProduto}"`
-    let nome = document.createElement("h3")
+    let nome = document.createElement("h5")
     nome.innerText = nomeProduto
-    let preco = document.createElement("p")
-    preco.innerText = `R$ ${precoProduto.toFixed(2)}`
+    let dimensoes = document.createElement("h5")
+    dimensoes.innerText = dimensoesProduto
+    let preco = document.createElement("h5")
+    preco.innerText = precoProduto
 
     product.appendChild(div)
     div.appendChild(img)
     product.appendChild(nome)
+    product.appendChild(dimensoes)
     product.appendChild(preco)
 }
 function adicionaTecnologia(i) {
