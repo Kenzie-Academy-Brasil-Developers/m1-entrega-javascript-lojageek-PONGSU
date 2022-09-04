@@ -120,7 +120,7 @@ body {
     justify-content: space-between;
     border-radius: 14px;
     width: 257px;
-    height: 375px;
+    height: 399px;
     background-color: rgb(96, 60, 17, 0.1);
     border: 2px solid rgb(96, 60, 17);    
     box-shadow: 0 0 15px rgb(153, 153, 153);
@@ -136,7 +136,7 @@ body {
     justify-content: space-between;
     border-radius: 11px;
     width: 257px;
-    height: 375px;
+    height: 399px;
     background-color: rgb(96, 60, 17, 0.3);
 }
 
@@ -169,6 +169,7 @@ body {
 }
 .container_produtos>li>h4 {
     padding-top: 7px;
+    max-width: 80%;
     color: #919191;
     font-size: 15px;
     margin: 0;
@@ -178,11 +179,20 @@ body {
 
 /*preço produto*/
 .container_produtos>li>p {
-    padding-top: 45px;
+    padding-top: 35px;
     padding-bottom: 10px;
     margin: 0;
     justify-content: flex-end;
-    color: hsl(0, 0%, 33%);
-    font-size: 16px;
+    color: rgb(96, 60, 17, 0.8);
+    font-size: 19px;
     font-weight: 700;
+}
+
+.container_produtos>li>h6 {
+    color: rgb(96, 60, 17, 0.5);
+    font-size: 15px;
+    margin: 0;
+    justify-content: center;
+    align-self: flex-end;
+    padding: 0 5px 5px 0;
 }
