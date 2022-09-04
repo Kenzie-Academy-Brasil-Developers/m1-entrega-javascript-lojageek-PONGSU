@@ -104,7 +104,7 @@ function criarLista() {
         tipoProduto = listaProdutos[i].type
         if (tipoProduto == "personagem") {
             titulo = document.getElementById('titulo_personagens')
-            titulo.innerText = "PROMOÇÂO !"
+            titulo.innerText = "PROMOÇÂO ! Whatsapp (22)98116-7375"
         } else if (tipoProduto == "tecnologia") {
             titulo = document.getElementById('titulo_tecnologia')
             titulo.innerText = "Moveis de Madeira Reflorestada"
