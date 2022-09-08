@@ -86,6 +86,7 @@ body {
 
 .container_secao {
     flex-direction: column;
+    text-decoration: none;
 
 }
 
@@ -93,12 +94,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     overflow-x: auto;
+    padding: 30px 0 0 0;
 }
 
 .titulo_secao {
-
+    text-decoration:none;
+    padding: 25px 0 0px 0;
     margin: 0;
-    padding: 50px 0 33px 0;
     color: #1B1B1B;
     font-size: 20px;
 }
@@ -112,7 +114,7 @@ body {
 /*produto*/
 .container_produtos>li:hover {
     width: 100%;
-    margin: 0 25px 15px 0;
+    margin: 0 30px 0px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,7 +130,7 @@ body {
 
 .container_produtos>li {
     width: 100%;
-    margin: 0 30px 25px 0;
+    margin: 0 30px 0px 0;
     display: flex;
     flex-direction: column;
     align-items: center;

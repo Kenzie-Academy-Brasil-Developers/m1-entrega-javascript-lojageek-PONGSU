@@ -79,6 +79,22 @@ let listaProdutos = [{
     codProduto: "Código do produto: 10",
     type: 'tecnologia',
 },{
+    img: './assets/img/moveis/Balanço.webp',
+    nome: 'Cadeira balanço rede',
+    dimensoes: 'Peso Max 120kg',
+    preco: 293.57,
+    id: 11,
+    codProduto: "8 cores disponíveis cod: 11",
+    type: 'tecnologia',
+},{
+    img: './assets/img/moveis/Cadeira redonda 4.webp',
+    nome: 'Cadeira suspensa conceito',
+    dimensoes: 'ferro + fibra + estofado impermeavel',
+    preco: 587.87,
+    id: 12,
+    codProduto: "5 cores disponíveis cod: 12",
+    type: 'tecnologia',
+},{
     img: './assets/img/promoção.jpg',
     nome: 'Entrego grátis em Lumiar (raio de 2km do centro) Outros lugares a combinar',         
     dimensoes: 'Montagem é simples mas caso solicite é cobrado 25 reais para uma unidade, 40 para duas e a partir de 3 unidades: Montagem grátis!',
@@ -104,7 +120,7 @@ function criarLista() {
         tipoProduto = listaProdutos[i].type
         if (tipoProduto == "personagem") {
             titulo = document.getElementById('titulo_personagens')
-            titulo.innerText = "PROMOÇÂO ! Whatsapp (22)98116-7375"
+            titulo.innerHTML = `PROMOÇÂO ! Whatsapp <a href="https://wa.me/5522981167375">(22)98116-7375</a>`
         } else if (tipoProduto == "tecnologia") {
             titulo = document.getElementById('titulo_tecnologia')
             titulo.innerText = "Moveis de Madeira Reflorestada"
